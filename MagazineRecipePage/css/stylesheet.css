@@ -1,0 +1,159 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+  html,
+  body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+    padding: 0;
+  }
+
+  h1{
+        color: black;
+    text-transform: uppercase;
+    line-height: 0.73;
+    font-weight: bold;
+    font-size: 5em;
+  }
+  h1 span{
+    color: #c4563b;
+    display: block;
+    font-size: 0.62em !important;
+  }
+
+  h2.header {
+    background: #c4563b;
+    font-size: 100%;
+    color: white;
+    padding: 8px 10px;
+    font-style: italic;
+  }
+
+  h2.cuntry {
+    width: 1.9em;
+    height: 1.1em;
+    -ms-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    position: absolute;
+    top: 2em;
+    right: -0.5em;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: white;
+  }
+
+  p.details::first-letter {
+    float: left;
+    font-size: 300%;
+    margin: 0 5px 5px 0;
+  }
+
+  img{
+    width:100%; 
+    height:100%;
+  } 
+
+  hr{
+    background: #c4563b;
+    height: 1px;
+  }
+footer {
+  padding: 30px 0;
+}
+  
+
+  .custom-counter {
+    margin: 0;
+    padding: 0 8px;
+    list-style-type: none;
+  }
+  .custom-counter li {
+    counter-increment: step-counter;
+  }
+  .custom-counter li::before {
+    content: counter(step-counter)'.';
+    margin-right: 5px;
+    color: #c4563b;
+  }
+
+  .no-gutter > [class*='col-'] {
+      padding-right:0;
+      padding-left:0;
+  }
+  
+  .jumbotron{
+    margin-bottom:0 !important;
+  }
+  
+  #sidebar{
+    background-color: #c4563b;
+  }
+  
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+  .row > [class*='col-'] {
+     display: flex;
+     flex-direction: column;
+  }
+  
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -100%; /* 12 columns */
+  }
+
+  .row-offcanvas-right.active
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -100%; /* 12 columns */
+  }
+
+  .row-offcanvas-left.active
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
